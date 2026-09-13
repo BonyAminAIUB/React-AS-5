@@ -1,75 +1,299 @@
-# React + TypeScript + Vite
+# 🚀 Dev Stack
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Dev Stack is a modern and responsive website where developers can explore different technologies and create their own technology stack.
 
-Currently, two official plugins are available:
+Users can view technology details, add technologies to their stack, remove selected technologies, and clear the full stack.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📌 Project Description
 
-## React Compiler
+Dev Stack helps developers discover useful technologies for web development.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The website shows different technologies with their:
 
-## Expanding the ESLint configuration
+* Name
+* Icon
+* Description
+* Category
+* Difficulty level
+* Rating
+* Badge
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Users can add their favorite technologies to the **Your Stack** section.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+The website is designed with a clean layout, gradient colors, responsive design, and simple user interaction.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🛠️ Technologies Used
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* React.js
+* TypeScript
+* Vite
+* Tailwind CSS
+* DaisyUI
+* React-Toastify
+* HTML5
+* CSS3
+* JSON
 
+## ✨ Main Features
+
+### 1. Explore Technologies
+
+Users can explore different technologies from several categories.
+
+Examples:
+
+* Frontend
+* Backend
+* Database
+* Language
+* Styling
+* DevOps
+* Tools
+
+Each technology card shows its icon, name, description, category, difficulty, rating, and badge.
+
+### 2. Build Your Own Stack
+
+Users can add their favorite technologies to the **Your Stack** section.
+
+The same technology cannot be added twice.
+
+After adding a technology, the button becomes disabled and shows:
+
+```text
+✓ Added to Stack
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Users can also remove one technology or remove all selected technologies.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 3. Responsive and User-Friendly Design
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+The website works properly on:
 
+* Mobile devices
+* Tablet devices
+* Desktop devices
+
+The project includes:
+
+* Sticky navbar
+* Mobile hamburger menu
+* Hero banner
+* Gradient buttons
+* Technology cards
+* Your Stack sidebar
+* Toast notifications
+* Loading state
+* Footer section
+
+## 🔔 Toast Notifications
+
+React-Toastify is used to show messages when users:
+
+* Add a technology
+* Try to add a duplicate technology
+* Remove a technology
+* Remove all technologies
+
+## 📂 Project Structure
+
+```text
+src
+├── assets
+│   ├── banner-stack.png
+│   ├── hamburger.png
+│   ├── logo-text.png
+│   ├── YourStack-with.png
+│   └── YourStack-without.png
+│
+├── components
+│   ├── Banner.tsx
+│   ├── Nav.tsx
+│   ├── Technologies.tsx
+│   ├── TechnologyCard.tsx
+│   ├── YourStack.tsx
+│   └── Footer.tsx
+│
+├── types
+│   └── technology.ts
+│
+├── App.tsx
+├── App.css
+├── index.css
+└── main.tsx
+
+public
+└── data.json
 ```
+
+## ⚙️ How to Run the Project
+
+### Step 1: Clone the Repository
+
+```bash
+git clone YOUR_GITHUB_REPOSITORY_LINK
+```
+
+### Step 2: Go to the Project Folder
+
+```bash
+cd YOUR_PROJECT_FOLDER
+```
+
+### Step 3: Install Dependencies
+
+```bash
+npm install
+```
+
+### Step 4: Start the Development Server
+
+```bash
+npm run dev
+```
+
+### Step 5: Build the Project
+
+```bash
+npm run build
+```
+
+## 📚 React Questions and Answers
+
+### 1. What is JSX, and why is it used in React?
+
+JSX is a syntax that allows us to write HTML-like code inside JavaScript or TypeScript.
+
+React uses JSX because it makes the UI code simple, readable, and easy to understand.
+
+---
+
+### 2. What is the difference between props and state?
+
+Props are used to send data from a parent component to a child component.
+
+State is used to store data inside a component. State can change over time and update the UI.
+
+For example, `technology` is passed as a prop to the `TechnologyCard` component.
+
+---
+
+### 3. What does the `useState` hook do, and where did you use it in this project?
+
+The `useState` hook is used to create and manage state in a React component.
+
+In this project, I used `useState` in:
+
+* `App.tsx` to store the technology data promise.
+* `Technologies.tsx` to store selected technologies.
+* `Nav.tsx` to control the mobile menu.
+
+Example:
+
+```tsx
+const [selectedTechnologies, setSelectedTechnologies] =
+  useState<ITechnology[]>([]);
+```
+
+---
+
+### 4. What does the `useEffect` hook do, and why did you need it to load the JSON data?
+
+The `useEffect` hook is used to perform side effects in React.
+
+For example, it can be used for:
+
+* Fetching data
+* Updating the page title
+* Working with external systems
+
+In this project, I did not need `useEffect` for loading the JSON data.
+
+Instead, I used a fetch promise in `App.tsx` and handled the loading state with `Suspense`.
+
+The JSON data is loaded from:
+
+```text
+public/data.json
+```
+
+---
+
+### 5. Why does every item in a `.map()` list need a unique `key` prop?
+
+A unique `key` helps React identify each item in a list.
+
+It helps React understand which item was added, removed, or updated.
+
+In this project, I used the technology ID as the key:
+
+```tsx
+{technologies.map((technology) => (
+  <TechnologyCard
+    key={technology.id}
+    technology={technology}
+  />
+))}
+```
+
+---
+
+### 6. What is conditional rendering? Show one place you used it.
+
+Conditional rendering means showing different UI based on a condition.
+
+In this project, the `YourStack` component shows an empty message when no technology is selected.
+
+```tsx
+{selectedTechnologies.length === 0 ? (
+  <p>No technologies added yet.</p>
+) : (
+  <div>
+    {/* Selected technologies */}
+  </div>
+)}
+```
+
+If the stack is empty, the empty message is shown.
+
+If technologies are selected, the selected technology list is shown.
+
+---
+
+### 7. How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
+
+A parent component sends data to a child component through props.
+
+A child component can send information back to the parent by calling a function received through props.
+
+Example:
+
+```tsx
+<TechnologyCard
+  technology={technology}
+  isSelected={isSelected}
+  onAddToStack={handleAddToStack}
+/>
+```
+
+Here:
+
+* `technology` sends technology data.
+* `isSelected` sends the selected status.
+* `onAddToStack` sends a function to the child.
+
+When the user clicks the button, the child calls the function:
+
+```tsx
+onClick={() => onAddToStack(technology)}
+```
+
+Then the parent component updates the selected technology list.
+
+## 👨‍💻 Author
+
+**Md. Bony Amin**
+
+## 📄 License
+
+This project was created for educational and project submission purposes.
