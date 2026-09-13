@@ -44,7 +44,6 @@ const Nav = () => {
           />
 
           <span className="hidden text-xl font-bold text-slate-900 sm:block">
-            Dev Stack
           </span>
         </a>
 

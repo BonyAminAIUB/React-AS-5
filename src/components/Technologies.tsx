@@ -64,31 +64,27 @@ const Technologies = ({
   return (
     <section
       id="technologies"
-      className="bg-slate-50 px-4 py-16 sm:px-6 lg:px-8"
+      className="bg-slate-50 px-4 py-10 sm:px-6 lg:px-8 lg:py-14"
     >
       <div className="mx-auto max-w-7xl">
 
         {/* Section Heading */}
-        <div className="mb-10 text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-600">
-            Explore The Ecosystem
-          </p>
-
-          <h2 className="mt-3 text-3xl font-bold text-slate-900 sm:text-4xl">
-            Choose Your Technologies
+        <div className="mb-8 text-left">
+          <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+            Explore the
+            <span className="brand-gradient-text"> Technologies</span>
           </h2>
 
-          <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-slate-600">
-            Explore the most useful technologies and add your
-            favorite tools to build your own developer stack.
+          <p className="mt-3 text-base text-slate-500">
+            Pick one technology per category to build your ideal stack.
           </p>
         </div>
 
         {/* Technologies and Your Stack */}
-        <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_320px]">
+        <div className="grid items-start gap-6 lg:grid-cols-[minmax(0,1fr)_320px]">
 
           {/* Technology Cards */}
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
+          <div className="grid grid-cols-1 items-stretch gap-6 sm:grid-cols-2 xl:grid-cols-3">
             {technologies.map((technology: ITechnology) => {
               const isSelected = selectedTechnologies.some(
                 (item) => item.id === technology.id,

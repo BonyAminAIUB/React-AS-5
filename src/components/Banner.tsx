@@ -4,27 +4,24 @@ const Banner = () => {
   return (
     <section
       id="home"
-      className="bg-white px-4 py-16 sm:px-6 lg:px-8 lg:py-24"
+      className="bg-white px-4 py-4 sm:px-6 lg:px-8 lg:py-6"
     >
       <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
 
         {/* Banner Content */}
         <div className="text-center lg:text-left">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-indigo-600">
-            Build Your Developer Journey
-          </p>
 
-          <h1 className="text-4xl font-extrabold leading-tight text-slate-900 sm:text-5xl lg:text-6xl">
-            Build Your
-
+          <h1 className="text-4xl font-bold leading-[1.08] tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
+            Build Your Ideal
             <span className="brand-gradient-text block">
-              Perfect Dev Stack
+              Development Stack
             </span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-xl text-base leading-7 text-slate-600 lg:mx-0">
-            Explore modern technologies, discover powerful tools,
-            and create your own personalized developer technology stack.
+            Explore frontend, backend, database and tooling options,
+            compare them side by side and put together the stack that fits your
+            new project.
           </p>
 
           {/* Buttons */}
