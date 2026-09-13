@@ -1,26 +1,28 @@
-# 🚀 Dev Stack
+# 🧱 Dev Stack Builder
 
-Dev Stack is a modern and responsive website where developers can explore different technologies and create their own technology stack.
+A modern and responsive website where users can explore different web development technologies and build their own technology stack.
 
-Users can view technology details, add technologies to their stack, remove selected technologies, and clear the full stack.
+Users can view technology details, compare different tools, and add their favorite technologies to the **Your Stack** section.
 
-## 📌 Project Description
+## 🌐 Live Website
 
-Dev Stack helps developers discover useful technologies for web development.
+[Visit Dev Stack Builder](https://react-as-5.netlify.app/)
 
-The website shows different technologies with their:
+## 📂 GitHub Repository
 
-* Name
-* Icon
-* Description
-* Category
-* Difficulty level
-* Rating
-* Badge
+[View GitHub Repository](https://github.com/BonyAminAIUB/React-AS-5)
 
-Users can add their favorite technologies to the **Your Stack** section.
+---
 
-The website is designed with a clean layout, gradient colors, responsive design, and simple user interaction.
+## ✨ Project Description
+
+**Dev Stack Builder** is a React and TypeScript based website for developers.
+
+This website provides a list of useful technologies such as React, JavaScript, TypeScript, Tailwind CSS, Next.js, and many more.
+
+Users can select technologies and create their own personalized development stack. The website has a clean design, responsive layout, interactive buttons, and toast notifications.
+
+---
 
 ## 🛠️ Technologies Used
 
@@ -30,93 +32,74 @@ The website is designed with a clean layout, gradient colors, responsive design,
 * Tailwind CSS
 * DaisyUI
 * React-Toastify
+* JSON
 * HTML5
 * CSS3
-* JSON
+* JavaScript ES6+
 
-## ✨ Main Features
+---
+
+## 🚀 Main Features
 
 ### 1. Explore Technologies
 
-Users can explore different technologies from several categories.
+Users can explore different technologies with their:
 
-Examples:
-
-* Frontend
-* Backend
-* Database
-* Language
-* Styling
-* DevOps
-* Tools
-
-Each technology card shows its icon, name, description, category, difficulty, rating, and badge.
+* Name
+* Icon
+* Description
+* Category
+* Difficulty level
+* Rating
+* Badge
 
 ### 2. Build Your Own Stack
 
 Users can add their favorite technologies to the **Your Stack** section.
 
-The same technology cannot be added twice.
+They can also:
 
-After adding a technology, the button becomes disabled and shows:
-
-```text
-✓ Added to Stack
-```
-
-Users can also remove one technology or remove all selected technologies.
+* See selected technologies
+* Remove a single technology
+* Remove all technologies
+* See the selected technology count
+* Get a warning when adding the same technology twice
 
 ### 3. Responsive and User-Friendly Design
 
-The website works properly on:
+The website is responsive for:
 
 * Mobile devices
-* Tablet devices
-* Desktop devices
+* Tablets
+* Desktop screens
 
-The project includes:
+It also includes:
 
-* Sticky navbar
-* Mobile hamburger menu
+* Responsive navbar
 * Hero banner
-* Gradient buttons
 * Technology cards
-* Your Stack sidebar
-* Toast notifications
-* Loading state
 * Footer section
+* Loading state
+* Toast notifications
+* Gradient brand theme
 
-## 🔔 Toast Notifications
+---
 
-React-Toastify is used to show messages when users:
-
-* Add a technology
-* Try to add a duplicate technology
-* Remove a technology
-* Remove all technologies
-
-## 📂 Project Structure
+## 📁 Project Structure
 
 ```text
 src
 ├── assets
-│   ├── banner-stack.png
-│   ├── hamburger.png
-│   ├── logo-text.png
-│   ├── YourStack-with.png
-│   └── YourStack-without.png
-│
 ├── components
 │   ├── Banner.tsx
+│   ├── Footer.tsx
 │   ├── Nav.tsx
 │   ├── Technologies.tsx
 │   ├── TechnologyCard.tsx
 │   ├── YourStack.tsx
-│   └── Footer.tsx
-│
+│   └── ...
 ├── types
 │   └── technology.ts
-│
 ├── App.tsx
 ├── App.css
 ├── index.css
@@ -126,18 +109,20 @@ public
 └── data.json
 ```
 
-## ⚙️ How to Run the Project
+---
+
+## 📦 Installation and Run Locally
 
 ### Step 1: Clone the Repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_LINK
+git clone https://github.com/BonyAminAIUB/React-AS-5.git
 ```
 
 ### Step 2: Go to the Project Folder
 
 ```bash
-cd YOUR_PROJECT_FOLDER
+cd React-AS-5
 ```
 
 ### Step 3: Install Dependencies
@@ -146,49 +131,47 @@ cd YOUR_PROJECT_FOLDER
 npm install
 ```
 
-### Step 4: Start the Development Server
+### Step 4: Run the Project
 
 ```bash
 npm run dev
 ```
 
-### Step 5: Build the Project
+Now open the local URL in your browser.
 
-```bash
-npm run build
+---
+
+# ❓ React Questions and Answers
+
+## 1. What is JSX, and why is it used in React?
+
+JSX is a syntax used in React to write HTML-like code inside JavaScript or TypeScript.
+
+It makes the UI code easier to read and write.
+
+Example:
+
+```tsx
+<h1>Hello React</h1>
 ```
 
-## 📚 React Questions and Answers
+---
 
-### 1. What is JSX, and why is it used in React?
+## 2. What is the difference between props and state?
 
-JSX is a syntax that allows us to write HTML-like code inside JavaScript or TypeScript.
+**Props** are used to pass data from a parent component to a child component.
 
-React uses JSX because it makes the UI code simple, readable, and easy to understand.
+**State** is used to store and manage data inside a component.
+
+Props are read-only, but state can be updated.
 
 ---
 
-### 2. What is the difference between props and state?
-
-Props are used to send data from a parent component to a child component.
-
-State is used to store data inside a component. State can change over time and update the UI.
-
-For example, `technology` is passed as a prop to the `TechnologyCard` component.
-
----
-
-### 3. What does the `useState` hook do, and where did you use it in this project?
+## 3. What does the `useState` hook do, and where did you use it in this project?
 
 The `useState` hook is used to create and manage state in a React component.
 
-In this project, I used `useState` in:
-
-* `App.tsx` to store the technology data promise.
-* `Technologies.tsx` to store selected technologies.
-* `Nav.tsx` to control the mobile menu.
-
-Example:
+In this project, it is used in the `Technologies.tsx` component to store the selected technologies.
 
 ```tsx
 const [selectedTechnologies, setSelectedTechnologies] =
@@ -197,35 +180,23 @@ const [selectedTechnologies, setSelectedTechnologies] =
 
 ---
 
-### 4. What does the `useEffect` hook do, and why did you need it to load the JSON data?
+## 4. What does the `useEffect` hook do, and why did you need it to load the JSON data?
 
-The `useEffect` hook is used to perform side effects in React.
+The `useEffect` hook runs side effects after a component renders.
 
-For example, it can be used for:
+It can be used to load data from a JSON file.
 
-* Fetching data
-* Updating the page title
-* Working with external systems
-
-In this project, I did not need `useEffect` for loading the JSON data.
-
-Instead, I used a fetch promise in `App.tsx` and handled the loading state with `Suspense`.
-
-The JSON data is loaded from:
-
-```text
-public/data.json
-```
+In this project, JSON data is loaded so that the technology list does not need to be hardcoded inside the component.
 
 ---
 
-### 5. Why does every item in a `.map()` list need a unique `key` prop?
+## 5. Why does every item in a `.map()` list need a unique `key` prop?
 
-A unique `key` helps React identify each item in a list.
+React uses the `key` prop to identify each item in a list.
 
 It helps React understand which item was added, removed, or updated.
 
-In this project, I used the technology ID as the key:
+Example:
 
 ```tsx
 {technologies.map((technology) => (
@@ -238,62 +209,54 @@ In this project, I used the technology ID as the key:
 
 ---
 
-### 6. What is conditional rendering? Show one place you used it.
+## 6. What is conditional rendering? Show one place you used it.
 
 Conditional rendering means showing different UI based on a condition.
 
-In this project, the `YourStack` component shows an empty message when no technology is selected.
+In this project, an empty message is shown when no technology is selected.
+
+Example:
 
 ```tsx
 {selectedTechnologies.length === 0 ? (
-  <p>No technologies added yet.</p>
+  <p>Your stack is empty.</p>
 ) : (
-  <div>
-    {/* Selected technologies */}
-  </div>
+  <p>Your selected technologies are shown here.</p>
 )}
 ```
 
-If the stack is empty, the empty message is shown.
-
-If technologies are selected, the selected technology list is shown.
-
 ---
 
-### 7. How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
+## 7. How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
 
-A parent component sends data to a child component through props.
+A parent sends data to a child through props.
 
-A child component can send information back to the parent by calling a function received through props.
+A child can send data back to the parent by calling a function passed through props.
 
 Example:
 
 ```tsx
 <TechnologyCard
   technology={technology}
-  isSelected={isSelected}
   onAddToStack={handleAddToStack}
 />
 ```
 
-Here:
+Here, the parent sends the technology data and function to the child.
 
-* `technology` sends technology data.
-* `isSelected` sends the selected status.
-* `onAddToStack` sends a function to the child.
+The child calls `onAddToStack()` when the user clicks the button.
 
-When the user clicks the button, the child calls the function:
-
-```tsx
-onClick={() => onAddToStack(technology)}
-```
-
-Then the parent component updates the selected technology list.
+---
 
 ## 👨‍💻 Author
 
-**Md. Bony Amin**
+**Bony Amin**
+
+* GitHub: [BonyAminAIUB](https://github.com/BonyAminAIUB)
+* Live Website: [Dev Stack Builder](https://react-as-5.netlify.app/)
+
+---
 
 ## 📄 License
 
-This project was created for educational and project submission purposes.
+This project was created for educational purposes.
